@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="main-section">
+        <nav>
+            <h1 class="faq-btn">FAQ's</h1>
+            <div class="outer-layer">
+                <div class="ball"></div>
+            </div>
+        </nav>
+        <main>
+            <form id="bmi" class="bmi-calc">
+                <div class="input-box">
+                    <input id="height" type="text" name="height" placeholder="Enter your height">
+                    <label for="height">height</label>
+                    <p>Cm</p>
+                </div>
+                <p class="err heightErr"></p>
+                <div class="input-box">
+                    <input id="weight" type="number" name="weight" placeholder="Enter your weight">
+                    <label for="weight">Weight</label>
+                    <p>Kg</p>
+                </div>
+                <p class="err weightErr"></p>
+                <button type="submit" id="button">Compute BMI</button>
+            </form>
+        </main>
+    </section>
+    <section id='section2' class="result-section hidden">
+        <div class="go-back">
+            <i class='bx bx-left-arrow-alt arr-left'></i>
+            <button class="back">Back</button>
+        </div>
+        <div class="result-container">
+            <div class="results">
+                <h3 class="your-bmi">Your BMI is: <span class="result"></span></h3>
+            </div>
+            <div class="categories">
+                <h3>BMI Categories</h3>
+                <p>Underweight = &lt 18.5</p>
+                <p>Normal weight = 18.5 - 24.9</p>
+                <p>Overweight = 25 - 29.9</p>
+                <p>Obesity = BMI of 30 or greater</p>
+            </div>
+        </div>
+
+        <div class="faq-container">
+            <h2>FAQs</h2>
+            <div class="faq" data-value="1">
+                <div class="question" data-value="1">
+                    <h3>How is BMI calculated</h3>
+                    <button class="expand" data-value="1">+</button>
+                </div>
+                <div class="content">
+                    <p>BMI is a calculated measure of body weight relative to height. CDC offers calculators to help
+                        you
+                        calculate BMI. For children and teens 2 through 19, use CDC's BMI Calculator for Child and
+                        Teen.
+                        For adults 20 and older, use CDC's Adult BMI Calculator.</p>
+                    <p>To calculate BMI by hand, use the formulas below:</p>
+                    <ul>
+                        <li>Metric Units: weight (kg)/[height (m)]2</li>
+                        <li>Metric Units: [weight (kg)/height (cm)/height (cm)] x 10,000</li>
+                        <li>U.S. Customary Units: weight (pounds)/[height (in)]2 x 703</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="faq" data-value="2">
+                <div class="question" data-value="2">
+                    <h3>How is BMI interpreted for adults</h3>
+                    <button class="expand" data-value="2">+</button>
+                </div>
+                <div class="content">
+                    <p>To interpret BMI values for adults 20 and older, use standard BMI categories regardless of age,
+                        sex, or race. For example, an adult who is 5 feet 8 inches tall and weighs 200 pounds has a BMI
+                        of 30.4. This BMI falls into the obesity category, defined as a BMI of 30.0 or higher. Read more
+                        about Adult BMI Categories.</p>
+                </div>
+            </div>
+            <div class="faq" data-value="3">
+                <div class="question" data-value="3">
+                    <h3>Why use BMI?</h3>
+                    <button class="expand" data-value="3">+</button>
+                </div>
+                <div class="content">
+                    <p>BMI is a quick, inexpensive, and reliable screening measure to assess a person's weight relative
+                        to their height. Having a BMI outside the healthy weight range can increase a person's risk for
+                        certain health problems. For example, people with BMIs in the obesity category are at increased
+                        risk for type 2 diabetes, heart disease, and other health problems.
+
+                        However, BMI is just one measure of health. Consider BMI with other factors—results from a
+                        physical exam, laboratory findings, health behaviors, and more. A health care provider can
+                        evaluate a person to get a more complete health picture. Read more About BMI.</p>
+                </div>
+            </div>
+            <div class="faq" data-value="4">
+                <div class="question" data-value="4">
+                    <h3>How is BMI used to assess obesity</h3>
+                    <button class="expand" data-value="4">+</button>
+                </div>
+                <div class="content">
+                    <p>For adults 20 or older, enter your height and weight into CDC's Adult BMI Calculator. The tool
+                        will then show your BMI and BMI category. For adults, the obesity category is defined as a BMI
+                        of 30.0 or higher. Talk to your health care provider about your BMI. It may relate to your risk
+                        for chronic diseases.
+
+                        For children and teens 2 through 19 years, use CDC's Child and Teen BMI Calculator. The tool
+                        will calculate BMI, BMI percentile, and BMI category. You can also view results on a growth
+                        chart. For children and teens, the obesity category is defined as a BMI at or above the 95th
+                        percentile for sex and age. Talk to your health care provider about your child's BMI. It may
+                        relate to overall health and well-being.</p>
+                </div>
+            </div>
+            <div class="faq" data-value="5">
+                <div class="question" data-value="5">
+                    <h3>Is BMI a good indicator of body fat?</h3>
+                    <button class="expand" data-value="5">+</button>
+                </div>
+                <div class="content">
+                    <p>For most people, BMI is a good indicator of whether they have too much or too little body fat.
+                        However, BMI is not a direct measure of body fat. BMI cannot distinguish fat mass from lean body
+                        mass (muscle and bone). BMI also cannot indicate where fat is located in the body.
+
+                        BMI is moderately to strongly associated with other measures that do capture the amount, type,
+                        and distribution of fat. A health care provider can help evaluate a person's health risks
+                        related to their BMI and body fat.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal">
+            <div class="ratings-container">
+                <div class="rating">
+                    <h1 class="rate-us">Rate Us:</h1>
+                    <div class="stars">
+                        <i class='bx bxs-star icon'></i>
+                        <i class='bx bxs-star icon'></i>
+                        <i class='bx bxs-star icon'></i>
+                        <i class='bx bxs-star icon'></i>
+                        <i class='bx bxs-star icon'></i>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="ok hidden">Submit</button>
+                    <button class="later">Later</button>
+                </div>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

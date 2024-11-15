@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", serif;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.main-section {
+  transition: all 0.6s ease;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 5rem;
+}
+
+.outer-layer {
+  border: 1px solid black;
+  width: 130px;
+  height: 52px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.ball {
+  border: 1px solid black;
+  background-color: black;
+  max-width: 100%;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: all 0.6s ease;
+  cursor: pointer;
+  margin: 1px 1px;
+  transform: translateX(0px);
+}
+
+.transform {
+  transform: translateX(163%);
+  background-color: white;
+}
+
+.background {
+  background-color: rgba(0, 0, 0, 0.815);
+  color: white;
+}
+
+.toggle-changes {
+  border: 1px solid white !important;
+  color: white !important;
+}
+
+.toggle-rating {
+  color: black;
+}
+
+.toggle-overlay {
+  background-color: rgba(10, 10, 10, 0.692) !important;
+}
+
+.border {
+  border: 1px solid white;
+}
+
+main {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bmi-calc {
+  height: 400px;
+  width: 430px;
+  border-radius: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: -10px 10px 15px rgba(7, 5, 5, 0.24);
+  /* border-top: none; */
+}
+
+.input-box {
+  border: 1px solid black;
+  width: 70%;
+  position: relative;
+  height: 40px;
+  margin-top: 3rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.input-box p {
+  position: absolute;
+  right: 5px;
+}
+
+.input-box input {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: 16px;
+  outline: none;
+  width: 82%;
+  background: transparent;
+  border: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.input-box label {
+  position: absolute;
+  left: 5px;
+  transition: all 0.6s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.input-box input:focus + label {
+  transform: translateY(-35px);
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+  left: -1px;
+  opacity: 1;
+}
+
+.bmi-calc button {
+  transform: translateY(5rem);
+  width: 10rem;
+  height: 3rem;
+  border-radius: 8px;
+  border: 1px solid black;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  background-color: transparent;
+}
+
+/* Section 2 */
+
+.result-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+}
+
+.modal {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 250px;
+
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; */
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  transition: all 0.5s ease;
+}
+
+.ratings-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.go-back {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.err {
+  position: relative;
+  left: -7rem;
+  top: 1px;
+  color: red;
+}
+
+.back {
+  font-size: 23px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.section2-color {
+  color: white !important;
+}
+
+.arr-left {
+  font-size: 25px;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.result {
+  font-size: 30px;
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+.rating {
+  text-align: center;
+}
+
+.stars {
+  margin-top: 2rem;
+  user-select: none;
+}
+
+.stars i {
+  font-size: 3.5rem;
+  color: rgba(221, 221, 221, 0.527);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.button {
+  align-self: flex-end;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  transition: all 0.5s ease;
+}
+
+.button button {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 30px;
+  width: 65px;
+  font-size: 1rem;
+  background-color: transparent;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+  transition: all 0.5s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  /* background: transparent; */
+  background-color: rgba(230, 230, 230, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.change-color {
+  color: yellow !important;
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+  margin: 0 5px;
+}
+
+.emoji {
+  font-size: 40px;
+}
+
+.disable {
+  pointer-events: none;
+  transform: translateY(-60px) scale(0.7);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 800px;
+  height: 100vh; */
+  margin: 0 50px;
+}
+
+.faq-container h2 {
+  margin-bottom: 15px;
+}
+
+.faq {
+  border: 1px solid rgba(133, 133, 133, 0.541);
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.question:hover {
+  background-color: rgb(209, 255, 255);
+}
+
+.question2 {
+  font-family: "Poppins", serif;
+}
+
+.question2:hover {
+  background-color: rgba(3, 3, 3, 0.384) !important;
+}
+
+.toggle-black {
+  background-color: rgba(3, 3, 3, 0.384);
+}
+
+.toggle-color {
+  background-color: rgb(209, 255, 255);
+}
+
+.question button {
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.button-rotate {
+  transform: rotate(45deg) scale(1.2);
+}
+
+.content {
+  line-height: 2;
+  max-height: 0;
+  transition: all 0.6s ease;
+  overflow: hidden;
+}
+
+.content p {
+  margin: 15px 20px;
+}
+
+.faq.active .content {
+  max-height: 400px;
+  transition: all 0.6s ease;
+}
+
+.content ul {
+  margin-left: 45px;
+}
+
+.content ul li::marker {
+  color: rgb(97, 196, 196);
+  font-size: 20px;
+}
+
+.categories {
+  position: relative;
+  top: 5rem;
+  left: 30px;
+  line-height: 2;
+}
+
+.your-bmi {
+  font-size: 25px;
+}
+
+.toggle-input {
+  color: white;
+}
+
+.final-rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+  height: 120px;
+  text-align: center;
+  position: relative;
+  top: 3px;
+  border-radius: 15px;
+}
+
+.final-rating p {
+  font-size: 18px;
+  color: black;
+}
+
+.faq-btn {
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.6s ease;
+}
